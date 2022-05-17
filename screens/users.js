@@ -11,15 +11,15 @@ if (window.location.href.indexOf("dashboard") > -1) {
 }
 function route(target) {
   if (target === "dashboard") {
-    window.location.replace("http://127.0.0.1:5500/screens/dashboard.html");
+    window.location.replace("./dashboard.html");
   } else if (target === "transactions") {
     // window.location.replace("http://127.0.0.1:5500/screens/transactions.html");
   } else if (target === "schedules") {
     // window.location.replace("http://127.0.0.1:5500/screens/schedules.html");
   } else if (target === "users") {
-    window.location.replace("http://127.0.0.1:5500/screens/users.html");
+    window.location.replace("./users.html");
   } else if (target === "settings") {
-    window.location.replace("http://127.0.0.1:5500/screens/settings.html");
+    window.location.replace("./settings.html");
   }
 }
 
