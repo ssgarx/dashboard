@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="users.css">
+</head>
+
+<body>
+    <div class="homeScreenBox1">
+        <div class="leftPanel">
+            <div>
+                <div class="closeIcon">
+                    <img id="closeIcon" src="./assets/icons/closeIcon.svg" alt="closeIcon">
+                </div>
+                <div class="logo">
+                    <p>dash.</p>
+                </div>
+                <div class="options">
+                    <div class="option" onclick="route('dashboard')">
+                        <div>
+                            <img src="./assets/icons/dashboardIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="dashboard">Dashboard</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('transactions')">
+                        <div>
+                            <img src="./assets/icons/transactionIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="transactions">Transactions</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('schedules')">
+                        <div>
+                            <img src="./assets/icons/scheduleIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="schedules">Schedules</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('users')">
+                        <div>
+                            <img src="./assets/icons/userIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="users">Users</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('settings')">
+                        <div>
+                            <img src="./assets/icons/settingIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="settings">Settings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>Help</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+        <div class="rightPanel">
+            <div class="rpUpper">
+                <div>
+                    <span>
+                        <img id="hamIcon" class="hamIcon" src="./assets/icons/hamIcon.svg" alt="hamIcon">
+                        <p>Users</p>
+                    </span>
+                </div>
+                <div>
+                    <div class="searchBar">
+                        <input type="text" placeholder="Search...">
+                        <img src="./assets/icons/searchIcon.svg" alt="searchIcon">
+                    </div>
+                    <div class="bellIcon">
+                        <img src="./assets/icons/bellIcon.svg" alt="bellIcon" />
+                    </div>
+                    <div class="profileIcon">
+                        <img src="./assets/icons/profileIcon.svg" alt="profileIcon" />
+
+                    </div>
+                </div>
+            </div>
+            <div id="rpLower" class="rpLower">
+                <div class="rplHead">
+                    <div class="rplHeadLeft">
+                        <p> User Records</p>
+                    </div>
+                    <div class="rplHeadRight">
+                        <div class="searchBar2">
+                            <input type="text" placeholder="Search...">
+                            <img src="./assets/icons/searchIcon.svg" alt="searchIcon">
+                        </div>
+                        <div class="filterBox">
+                            <button id="filterButton" onclick="triggerFilter()" class="filterButton">
+                                <span>
+                                    <img src="./assets/icons/filterIcon.svg" alt="filterIcon">
+                                </span>
+                                filter
+                            </button>
+                            <div style="display: none;" id="filterPopup" class="filterPopup">
+                                <p onclick="applyfilter(`male`)">male</p>
+                                <p onclick="applyfilter(`female`)">female</p>
+                            </div>
+                        </div>
+                        <button class="addButton">
+                            + add
+                        </button>
+                    </div>
+                </div>
+                <div id="rplContent" class="rplContent">
+
+                </div>
+                <div class="rllBottom">
+                    <div class="">
+                        <button>
+                            <img src="./assets/icons/arrowIcon.svg" alt="leftArrow">
+                        </button>
+                        <button id="btnpg1" onclick="pageClick(1)">1</button>
+                        <button id="btnpg2" onclick="pageClick(2)">2</button>
+                        <button>
+                            <img src="./assets/icons/arrowIcon.svg" alt="leftArrow">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="users.js"></script>
+</body>
+
+</html>

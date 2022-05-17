@@ -1,0 +1,908 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e5e5e5;
+}
+
+.homeScreenBox1 * {
+  background-color: transparent;
+}
+
+.homeScreenBox1 {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeScreenBox1 .leftPanel,
+.homeScreenBox1 .rightPanel {
+  height: 100%;
+}
+
+.homeScreenBox1 .leftPanel {
+  -webkit-box-flex: 1.8;
+      -ms-flex: 1.8;
+          flex: 1.8;
+  background-color: #0d5f9a;
+  height: 95vh;
+  margin-left: 30px;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .homeScreenBox1 .leftPanel {
+    position: absolute;
+    left: -100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  }
+}
+
+.homeScreenBox1 .leftPanel > div:first-child .closeIcon {
+  text-align: right;
+  position: relative;
+  top: -30px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+  .homeScreenBox1 .leftPanel > div:first-child .closeIcon {
+    display: none;
+  }
+}
+
+.homeScreenBox1 .leftPanel > div:first-child .logo > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.homeScreenBox1 .leftPanel > div:first-child .options {
+  margin-top: 50px;
+}
+
+.homeScreenBox1 .leftPanel > div:first-child .options .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin: 30px 5px;
+  cursor: pointer;
+}
+
+.homeScreenBox1 .leftPanel > div:first-child .options .option > div:nth-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 10px;
+}
+
+.homeScreenBox1 .leftPanel > div:first-child .options .option > div:nth-child(2) {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.homeScreenBox1 .leftPanel > div:first-child .options .option > div:nth-child(2) > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.homeScreenBox1 .leftPanel > div:nth-child(2) {
+  position: relative;
+  left: -30px;
+}
+
+.homeScreenBox1 .leftPanel > div:nth-child(2) > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  text-transform: capitalize;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.homeScreenBox1 .rightPanel {
+  overflow-y: scroll;
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  height: 95vh;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeScreenBox1 .rightPanel .rpUpper,
+.homeScreenBox1 .rightPanel .rpLower {
+  width: 100%;
+}
+
+.homeScreenBox1 .rightPanel .rpUpper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 15px;
+}
+
+.homeScreenBox1 .rightPanel .rpUpper > div:nth-child(1) > span > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.homeScreenBox1 .rightPanel .rpUpper > div:nth-child(1) > span .hamIcon {
+  display: none;
+  position: relative;
+  top: -1px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.homeScreenBox1 .rightPanel .rpUpper > div:nth-child(1) > span .hamIcon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) {
+  .homeScreenBox1 .rightPanel .rpUpper > div:nth-child(1) > span .hamIcon {
+    display: inline-block;
+  }
+}
+
+.homeScreenBox1 .rightPanel .rpUpper > div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeScreenBox1 .rightPanel .rpUpper > div:nth-child(2) .searchBar {
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 0px 10px;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 550px) {
+  .homeScreenBox1 .rightPanel .rpUpper > div:nth-child(2) .searchBar {
+    display: none;
+  }
+}
+
+.homeScreenBox1 .rightPanel .rpUpper > div:nth-child(2) .searchBar > input {
+  border: none;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #b0b0b0;
+}
+
+.homeScreenBox1 .rightPanel .rpUpper > div:nth-child(2) .searchBar > input:focus {
+  outline: none;
+}
+
+.homeScreenBox1 .rightPanel .rpUpper > div:nth-child(2) .bellIcon {
+  margin-right: 30px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .homeScreenBox1 .rightPanel .rpLower {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft,
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight {
+  border-radius: 20px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 40px;
+  background-color: #ffffff;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .heading {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .heading > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  text-transform: capitalize;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+
+@media screen and (max-width: 550px) {
+  .homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent > div {
+    width: 100%;
+  }
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcLeft {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  height: 100%;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcLeft .profileBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcLeft .profileBox > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #666666;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcLeft .profileBox > button {
+  border: 2px solid #858585;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  color: #858585;
+  border-radius: 5px;
+  padding: 0 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  height: 100%;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .nameBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .nameBox > div:nth-child(1) {
+  margin-right: 25px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .nameBox > div > label {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .nameBox > div > input {
+  background: #f5f5f5;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  border: 1px solid #f5f5f500;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .nameBox > div > input:focus {
+  border: 1px solid #858585 !important;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .passwordBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+  height: 40px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .passwordBox > input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  border: 1px solid #f5f5f500;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .passwordBox > input:focus {
+  border: none;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .passwordBox > button {
+  border: none;
+  background-color: transparent;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight > label {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight > input {
+  background: #f5f5f5;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  border: 1px solid #f5f5f500;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight > input:focus {
+  border: 1px solid #858585 !important;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .saveBtnHolder {
+  text-align: right;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .saveBtnHolder > button {
+  width: 100%;
+  background-color: #0d5f9a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  width: 30%;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .saveBtnHolder > button:hover {
+  opacity: 0.9;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerLeft .profileContent .pcRight .saveBtnHolder > button:active {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight {
+  height: 100%;
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper,
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle,
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightLower {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper > div:nth-child(1) {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper > label {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper > input {
+  background: #f5f5f5;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  border: 1px solid #f5f5f500;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper > input:focus {
+  border: 1px solid #858585 !important;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .rplPasswordBox,
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .rplCPasswordBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+  height: 40px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .rplPasswordBox > input,
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .rplCPasswordBox > input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  border: 1px solid #f5f5f500;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .rplPasswordBox > input:focus,
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .rplCPasswordBox > input:focus {
+  border: none;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .rplPasswordBox > button,
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .rplCPasswordBox > button {
+  border: none;
+  background-color: transparent;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .saveBtnHolder {
+  text-align: right;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .saveBtnHolder > button {
+  width: 100%;
+  background-color: #0d5f9a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  width: 30%;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .saveBtnHolder > button:hover {
+  opacity: 0.9;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightUpper .saveBtnHolder > button:active {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(1) {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Rounded sliders */
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) .switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 20px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 1px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) input:checked + .slider {
+  background-color: #66d055;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #66d055;
+          box-shadow: 0 0 1px #66d055;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) .slider.round {
+  border-radius: 34px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightMiddle > div:nth-child(2) .slider.round:before {
+  border-radius: 50%;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightLower {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightLower > div:nth-child(1) {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightLower > div:nth-child(2) > button {
+  width: 100%;
+  background-color: #0d5f9a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #af0000;
+  color: #af0000;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightLower > div:nth-child(2) > button:hover {
+  opacity: 0.9;
+}
+
+.homeScreenBox1 .rightPanel .rpLower .rpLowerRight .rpLowerRightLower > div:nth-child(2) > button:active {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  /* height of horizontal scrollbar */
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border: 2px solid #c1c1c1;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=settings.css.map */

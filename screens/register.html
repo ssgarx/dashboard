@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="homeScreenBox1">
+        <div>
+            <p>dash.</p>
+        </div>
+        <div>
+            <div class="loginBox">
+                <div class="upperSection">
+                    <p>Create an account</p>
+                    <p>Create an account to use dashboard</p>
+                    <div class="options">
+                        <div>
+                            <span>
+                                <img src="./assets/icons/googleIcon.svg" alt="google_icon">
+                                Sign up with Google
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="./assets/icons/appleIcon.svg" alt="google_icon">
+                                Sign up with Apple
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="credBox">
+                    <div class="nameBox">
+                        <div>
+                            <label for="html">First Name</label>
+                            <br>
+                            <input type="text" placeholder="John">
+                        </div>
+                        <div>
+                            <label for="html">Last Name</label>
+                            <br>
+                            <input type="text" placeholder="Doe">
+                        </div>
+                    </div>
+                    <label for="html">Email address</label>
+                    <br>
+                    <input type="text" placeholder="johndoe@gmail.com">
+                    <br>
+                    <label for="html">Password</label>
+                    <br>
+                    <div id="passwordBox1" class="passwordBox">
+                        <input id="psw1" type="password" placeholder=" Password">
+                        <button>
+                            <img id="psb1" src="./assets/icons/eyeIcon.svg" alt="eye_icon">
+                        </button>
+                    </div>
+                    <label for="html">Password</label>
+                    <br>
+                    <div id="passwordBox2" class="passwordBox">
+                        <input id="psw2" type="password" placeholder="Confirm Password">
+                        <button>
+                            <img id="psb2" src="./assets/icons/eyeIcon.svg" alt="eye_icon">
+                        </button>
+                    </div>
+                    <div class="tandc">
+                        <span>
+                            <input type="checkbox">
+                            I agree the <a>terms and conditions</a>
+                        </span>
+                    </div>
+                    <div id="signUpButton" class="signInButton">
+                        <button>Sign Up</button>
+                    </div>
+                </div>
+                <div class="linkBox">
+                    <span>Already have an account? <a href="http://127.0.0.1:5500/index.html"> Sign in here</a> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="register.js"></script>
+</body>
+
+</html>

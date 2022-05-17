@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="homeScreenBox1">
+        <div>
+            <p>dash.</p>
+        </div>
+        <div>
+            <div class="loginBox">
+                <div class="upperSection">
+                    <p>Sign In</p>
+                    <p>Sign in to your account </p>
+                    <div class="options">
+                        <div>
+                            <span>
+                                <img src="./assets/icons/googleIcon.svg" alt="google_icon">
+                                Sign in with Google
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="./assets/icons/appleIcon.svg" alt="google_icon">
+                                Sign in with Apple
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="credBox">
+                    <label for="html">Email address</label>
+                    <br>
+                    <input type="text" placeholder="Email">
+                    <br>
+                    <label for="html">Password</label>
+                    <br>
+
+                    <div class="passwordBox">
+                        <input id="psw" type="password" placeholder="Password">
+                        <button>
+                            <img id="psb" src="./assets/icons/eyeIcon.svg" alt="eye_icon">
+                        </button>
+                    </div>
+                    <div class="forgotPassword">
+                        <p>Forgot Password?</p>
+                    </div>
+                    <div id="signInButton" class="signInButton">
+                        <button>Sign In</button>
+                    </div>
+                </div>
+                <div class="linkBox">
+                    <span>Don’t have an account? <a href="./screens/register.html"> Register here</a> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

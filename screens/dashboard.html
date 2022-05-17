@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CHART JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="homeScreenBox1">
+        <div class="leftPanel">
+            <div>
+                <div class="closeIcon">
+                    <img id="closeIcon" src="./assets/icons/closeIcon.svg" alt="closeIcon">
+                </div>
+                <div class="logo">
+                    <p>dash.</p>
+                </div>
+                <div class="options">
+                    <div class="option" onclick="route('dashboard')">
+                        <div>
+                            <img src="./assets/icons/dashboardIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="dashboard">Dashboard</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('transactions')">
+                        <div>
+                            <img src="./assets/icons/transactionIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="transactions">Transactions</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('schedules')">
+                        <div>
+                            <img src="./assets/icons/scheduleIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="schedules">Schedules</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('users')">
+                        <div>
+                            <img src="./assets/icons/userIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="users">Users</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('settings')">
+                        <div>
+                            <img src="./assets/icons/settingIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="settings">Settings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>Help</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+        <div class="rightPanel">
+            <div class="rpUpper">
+                <div>
+                    <span>
+                        <img id="hamIcon" class="hamIcon" src="./assets/icons/hamIcon.svg" alt="hamIcon">
+                        <p>Dashboard</p>
+                    </span>
+                </div>
+                <div>
+                    <div class="searchBar">
+                        <input type="text" placeholder="Search...">
+                        <img src="./assets/icons/searchIcon.svg" alt="searchIcon">
+                    </div>
+                    <div class="bellIcon">
+                        <img src="./assets/icons/bellIcon.svg" alt="bellIcon" />
+                    </div>
+                    <div class="profileIcon">
+                        <img src="./assets/icons/profileIcon.svg" alt="profileIcon" />
+                    </div>
+                </div>
+            </div>
+            <div class="rpLower">
+                <div class="rplUpper">
+                    <div>
+                        <div>
+                            <img src="./assets/icons/revenueIcon.svg" alt="revenueIcon">
+                        </div>
+                        <div>
+                            <p>Total Revenues</p>
+                        </div>
+                        <div>
+                            <p>$2,129,430</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="./assets/icons/transactionIconBlack.svg" alt="transactionIcon">
+                        </div>
+                        <div>
+                            <p>Total Transactions</p>
+                        </div>
+                        <div>
+                            <p>1,520</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="./assets/icons/thumbsUpIcon.svg" alt="thumbsUpIcon">
+                        </div>
+                        <div>
+                            <p>Total Likes</p>
+                        </div>
+                        <div>
+                            <p>9,721</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="./assets/icons/usersIcon.svg" alt="profileIcon">
+                        </div>
+                        <div>
+                            <p>Total Users</p>
+                        </div>
+                        <div>
+                            <p>892</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rplMiddle">
+                    <div class="rplmUpper">
+                        <div>
+                            <p>Activities</p>
+                            <button>
+                                <span>
+                                    May - June 2021
+                                </span>
+                                <img src="./assets/icons/arrowSmallIcon.svg" alt="arrowDownIcon">
+                            </button>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="./assets/icons/redDot.svg" alt="redDot">
+                                guest</span>
+                            <span>
+                                <img src="./assets/icons/greenDot.svg" alt="greenDot">
+                                user</span>
+                        </div>
+                    </div>
+                    <div class="rplmLower">
+                        <canvas id="myLoopChart"></canvas>
+                        <script>
+                            const ctx2 = document.getElementById('myLoopChart').getContext('2d');
+                            var lineChartData = { labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',], datasets: [] },
+                                array = ["[649,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]", "[0,0,181,0,0,249,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0,0]"]
+
+                            array.forEach(function (a, i) {
+                                lineChartData.datasets.push({
+                                    label: 'Label ' + i,
+                                    data: JSON.parse(a),
+                                    borderColor: "red",
+                                    backgroundColor: "transparent",
+                                    tension: 0.4,
+                                });
+                            });
+
+                            console.log(lineChartData);
+                            const myChart2 = new Chart(ctx2, {
+                                type: 'line',
+                                data:
+                                {
+                                    labels: [
+                                        "0",
+                                        "Week 1",
+                                        "Week 2",
+                                        "Week 3",
+                                        "Week 4",
+                                    ],
+                                    datasets: [
+                                        {
+                                            backgroundColor: "transparent",
+                                            borderColor: "#E9A0A0",
+                                            data: [200, 400, 200, 300, 220, 450],
+                                            label: "Label 0",
+                                            tension: 0.4
+                                        },
+                                        {
+                                            backgroundColor: "transparent",
+                                            borderColor: "#9BDD7C",
+                                            data: [100, 410, 150, 300, 220, 250],
+                                            label: "Label 0",
+                                            tension: 0.4
+                                        }
+                                    ]
+                                },
+                                //disable legend
+                                options: {
+                                    animations: {
+                                        radius: {
+                                            duration: 400,
+                                            easing: 'linear',
+                                            loop: (context) => context.active
+                                        }
+                                    },
+                                    hoverRadius: 12,
+                                    hoverBackgroundColor: 'yellow',
+                                    interaction: {
+                                        mode: 'nearest',
+                                        intersect: false,
+                                        axis: 'x'
+                                    },
+                                    plugins: {
+                                        tooltip: {
+                                            enabled: false
+                                        }
+                                    },
+                                    legend: {
+                                        display: false
+                                    }
+                                },
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="rplLower">
+                    <div class="productBox">
+                        <div class="pbUpper">
+                            <p>Top products</p>
+                            <button>
+                                <span>May - June 2021</span>
+                                <img src="./assets/icons/arrowSmallIcon.svg" alt="arrowSmallIcon">
+                            </button>
+                        </div>
+                        <div class="pbLower">
+                            <div class="pbLowerLeft">
+                                <canvas id="myPieChart"></canvas>
+                                <script>
+                                    const ctx = document.getElementById('myPieChart').getContext('2d');
+                                    const myChart = new Chart(ctx, {
+                                        type: 'pie',
+                                        data: {
+                                            labels: [
+                                                'Red',
+                                                'Blue',
+                                                'Yellow'
+                                            ],
+                                            datasets: [{
+                                                label: 'My First Dataset',
+                                                data: [14, 55, 31],
+                                                backgroundColor: [
+                                                    'rgb(255, 99, 132)',
+                                                    'rgb(54, 162, 235)',
+                                                    'rgb(255, 205, 86)'
+                                                ],
+                                                hoverOffset: 4
+                                            }]
+                                        },
+                                        //disable legend
+                                        options: {
+                                            legend: {
+                                                display: false
+                                            }
+                                        }
+
+
+                                    });
+                                </script>
+                            </div>
+                            <div class="pbLowerRight">
+                                <div class="pblLabelContent">
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <p>text1</p>
+                                        <p>00%</p>
+                                    </div>
+                                </div>
+                                <div class="pblLabelContent">
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <p>text1</p>
+                                        <p>00%</p>
+                                    </div>
+                                </div>
+                                <div class="pblLabelContent">
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <p>text1</p>
+                                        <p>00%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="scheduleBox">
+                        <div class="sbUpper">
+                            <p>Today’s schedule</p>
+                            <button>
+                                <span>see all</span>
+                                <img src="./assets/icons/arrowSmallIcon.svg" alt="arrowSmallIcon">
+                            </button>
+                        </div>
+                        <div class="sbLower">
+                            <div class="meetBox">
+                                <div>
+                                </div>
+                                <div>
+                                    <p>Meeting with suppliers from Kuta Bali</p>
+                                    <p>14.00-15.00</p>
+                                    <p>at Sunset Road, Kuta, Bali </p>
+                                </div>
+                            </div>
+                            <div class="meetBox">
+                                <div>
+                                </div>
+                                <div>
+                                    <p>Meeting with suppliers from Kuta Bali</p>
+                                    <p>14.00-15.00</p>
+                                    <p>at Sunset Road, Kuta, Bali </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

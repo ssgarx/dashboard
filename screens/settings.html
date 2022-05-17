@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+    <div class="homeScreenBox1">
+        <div class="leftPanel">
+            <div>
+                <div class="closeIcon">
+                    <img id="closeIcon" src="./assets/icons/closeIcon.svg" alt="closeIcon">
+                </div>
+                <div class="logo">
+                    <p>dash.</p>
+                </div>
+                <div class="options">
+                    <div class="option" onclick="route('dashboard')">
+                        <div>
+                            <img src="./assets/icons/dashboardIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="dashboard">Dashboard</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('transactions')">
+                        <div>
+                            <img src="./assets/icons/transactionIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="transactions">Transactions</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('schedules')">
+                        <div>
+                            <img src="./assets/icons/scheduleIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="schedules">Schedules</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('users')">
+                        <div>
+                            <img src="./assets/icons/userIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="users">Users</p>
+                        </div>
+                    </div>
+                    <div class="option" onclick="route('settings')">
+                        <div>
+                            <img src="./assets/icons/settingIcon.svg" alt="">
+                        </div>
+                        <div>
+                            <p id="settings">Settings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>Help</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+        <div class="rightPanel">
+            <div class="rpUpper">
+                <div>
+                    <span>
+                        <img id="hamIcon" class="hamIcon" src="./assets/icons/hamIcon.svg" alt="hamIcon">
+                        <p>settings</p>
+                    </span>
+                </div>
+                <div>
+                    <div class="searchBar">
+                        <input type="text" placeholder="Search...">
+                        <img src="./assets/icons/searchIcon.svg" alt="searchIcon">
+                    </div>
+                    <div class="bellIcon">
+                        <img src="./assets/icons/bellIcon.svg" alt="bellIcon" />
+                    </div>
+                    <div class="profileIcon">
+                        <img src="./assets/icons/profileIcon.svg" alt="profileIcon" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="rpLower">
+                <div class="rpLowerLeft">
+                    <div class="heading">
+                        <p>profile</p>
+                    </div>
+                    <div class="profileContent">
+                        <div class="pcLeft">
+                            <div class="profileBox">
+                                <div></div>
+                                <button>change</button>
+                            </div>
+                        </div>
+                        <div class="pcRight">
+                            <div class="nameBox">
+                                <div>
+                                    <label for="html">First Name</label>
+                                    <br>
+                                    <input type="text" placeholder="John">
+                                </div>
+                                <div>
+                                    <label for="html">Last Name</label>
+                                    <br>
+                                    <input type="text" placeholder="Doe">
+                                </div>
+                            </div>
+                            <label for="html">Date of Birth</label>
+                            <div id="passwordBox1" class="passwordBox">
+                                <input id="psw1" type="date" placeholder="28 February 1996">
+
+                            </div>
+                            <label for="html">Phone Number</label>
+                            <br>
+                            <input type="number" placeholder="+1283716291">
+                            <label for="html">Address</label>
+                            <br>
+                            <input type="text" placeholder="323 Fifth Ave. Canandaigua, NY">
+                            <div class="saveBtnHolder">
+                                <button>save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rpLowerRight">
+                    <div class="rpLowerRightUpper">
+                        <div>
+                            <p>account</p>
+                        </div>
+                        <label for="html">Email address</label>
+                        <br>
+                        <input type="text" placeholder="johndoe@gmail.com">
+                        <br>
+                        <label for="html">Password</label>
+                        <br>
+                        <div class="rplPasswordBox">
+                            <input type="password" placeholder=" Password">
+                            <button>
+                                <img src="./assets/icons/eyeIcon.svg" alt="eye_icon">
+                            </button>
+                        </div>
+                        <label for="html">Confirm Password</label>
+                        <br>
+                        <div class="rplCPasswordBox">
+                            <input type="password" placeholder="Confirm Password">
+                            <button>
+                                <img src="./assets/icons/eyeIcon.svg" alt="eye_icon">
+                            </button>
+                        </div>
+                        <div class="saveBtnHolder">
+                            <button>save</button>
+                        </div>
+                    </div>
+                    <div class="rpLowerRightMiddle">
+                        <div>
+                            <p>Security</p>
+                        </div>
+                        <div>
+                            <p>2-Step Verification</p>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rpLowerRightLower">
+                        <div>
+                            <p>Danger zone</p>
+                        </div>
+                        <div>
+                            <button>Delete My Account</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+
+</html>

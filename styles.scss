@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+@import "./partials.scss";
+
+$themeBlue: #0d5f9a;
+$themeBackground: #f5f5f5;
+$themeMutedGray: #858585;
+$themeLink: #346bd4;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeScreenBox1 {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    height: 100%;
+    width: 100%;
+  }
+  > div:nth-child(1) {
+    flex: 0.8;
+    background-color: $themeBlue;
+    @include flex-center;
+    > p {
+      text-transform: capitalize;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 88px;
+      color: #ffffff;
+    }
+  }
+  > div:nth-child(2) {
+    flex: 2;
+    background-color: $themeBackground;
+    @include flex-center;
+    .loginBox {
+      // border: 1px solid red;
+      // width: 80%;
+      .upperSection {
+        margin-bottom: 25px;
+        > p:nth-child(1) {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 44px;
+          padding: 2.5px 0;
+        }
+        > p:nth-child(2) {
+          padding: 2.5px 0;
+          font-family: "Lato";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+
+          color: #000000;
+        }
+        .options {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-top: 10px;
+          cursor: pointer;
+          > div {
+            // flex: 1;
+            text-align: left;
+          }
+          > div:nth-child(1) {
+            > span {
+              padding: 8px 15px;
+              border-radius: 10px;
+              background-color: #ffffff;
+              margin-right: 25px;
+              > img {
+                width: 14px;
+                height: 14px;
+                object-fit: contain;
+                position: relative;
+                top: 2.2px;
+                margin-right: 8px;
+              }
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 15px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              color: $themeMutedGray;
+              display: inline-block;
+            }
+          }
+          > div:nth-child(2) {
+            > span {
+              // border: 1px solid red;
+              padding: 8px 15px;
+              border-radius: 10px;
+              background-color: #ffffff;
+              > img {
+                width: 14px;
+                height: 14px;
+                object-fit: contain;
+                position: relative;
+                top: 2.2px;
+                margin-right: 8px;
+              }
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 15px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              color: $themeMutedGray;
+              display: inline-block;
+            }
+          }
+        }
+      }
+      .credBox {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 30px;
+        > label {
+          @include labelStyle;
+        }
+        > input {
+          @include inputStyle;
+        }
+        .passwordBox {
+          @include passwordBox;
+          transition: 0.3s;
+        }
+        .forgotPassword {
+          padding-bottom: 15px;
+          cursor: pointer;
+          > p {
+            font-family: "Lato";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $themeLink;
+          }
+        }
+        .signInButton {
+          > button {
+            @include themeButton;
+          }
+        }
+      }
+      .linkBox {
+        @include linkBox;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .homeScreenBox1 {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    > div {
+      height: 100%;
+      width: 100%;
+    }
+    > div:nth-child(1) {
+      flex: 0.5;
+      animation: popIn 0.1s ease-in-out;
+    }
+  }
+}
+@keyframes popIn {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
